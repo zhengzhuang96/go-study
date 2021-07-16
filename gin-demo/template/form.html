@@ -1,0 +1,44 @@
+<!--
+ * @Author: zhengzhuang
+ * @Date: 2021-07-16 11:38:28
+ * @LastEditors: zhengzhuang
+ * @LastEditTime: 2021-07-16 14:49:50
+ * @Description: In User Settings Edit
+ * @FilePath: /gin-demo/app/formParameters.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From 表单提交</title>
+</head>
+
+<body>
+  <!-- 正常表单 -->
+  <form action="http://localhost:8080/formParameters" method="post">
+    用户名: <input type="text" name="username" id="">
+    密码: <input type="text" name="password" id="">
+    <input type="submit" value="提交">
+  </form>
+  <!-- 上传单个文件 -->
+  <form action="http://localhost:8080/uploadFile" method="post" enctype="multipart/form-data">
+    选择文件: <input type="file" name="file" id="">
+    <input type="submit" value="提交">
+  </form>
+  <!-- 上传多个文件 -->
+  <form action="http://localhost:8080/uploadMultipleFiles" method="post" enctype="multipart/form-data">
+    上传多张文件:<input type="file" name="files" multiple>
+    <input type="submit" value="提交">
+  </form>
+  <!-- 处理接收到的form表单数据 -->
+  <form action="http://localhost:8080/formDataHandle" method="post">
+    User: <input type="text" name="username" id="">
+    password: <input type="text" name="password" id="">
+    <input type="submit" value="表单验证">
+  </form>
+</body>
+
+</html>

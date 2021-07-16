@@ -1,0 +1,37 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /apiParameters/:name/*action --> ginDemo/app.ApiParameters (4 handlers)
+[GIN-debug] GET    /urlParameters            --> ginDemo/app.UrlParameters (4 handlers)
+[GIN-debug] GET    /formHtml                 --> ginDemo/app.FormHtml (4 handlers)
+[GIN-debug] POST   /formParameters           --> ginDemo/app.FormParameters (4 handlers)
+[GIN-debug] POST   /uploadFile               --> ginDemo/app.UploadFile (4 handlers)
+[GIN-debug] POST   /uploadMultipleFiles      --> ginDemo/app.UploadMultipleFiles (4 handlers)
+[GIN-debug] POST   /jsonDataHandle           --> ginDemo/app.JsonDataHandle (4 handlers)
+[GIN-debug] POST   /formDataHandle           --> ginDemo/app.FormDataHandle (4 handlers)
+[GIN-debug] GET    /urlDataHandle/:user/:password --> ginDemo/app.UrlDataHandle (4 handlers)
+[GIN-debug] GET    /someJson                 --> ginDemo/app.SomeJSON (4 handlers)
+[GIN-debug] GET    /someStruct               --> ginDemo/app.SomeStruct (4 handlers)
+[GIN-debug] GET    /someXml                  --> ginDemo/app.SomeXML (4 handlers)
+[GIN-debug] GET    /someYaml                 --> ginDemo/app.SomeYAML (4 handlers)
+[GIN-debug] GET    /someProtoBuf             --> ginDemo/app.SomeProtoBuf (4 handlers)
+[GIN-debug] GET    /htmlTemplate             --> ginDemo/app.HtmlTemplate (4 handlers)
+[GIN-debug] GET    /redirect                 --> ginDemo/app.Redirect (4 handlers)
+[GIN-debug] GET    /longAsync                --> ginDemo/app.LongAsync (5 handlers)
+[GIN-debug] GET    /longSync                 --> ginDemo/app.LongSync (4 handlers)
+[GIN-debug] GET    /cookie                   --> ginDemo/app.Cookie (4 handlers)
+[GIN-debug] GET    /loginGetCookie           --> ginDemo/app.LoginSetCookie (4 handlers)
+[GIN-debug] GET    /homeCookie               --> ginDemo/app.HomeCookie (5 handlers)
+[GIN-debug] Loaded HTML Templates (3): 
+	- index.html
+	- 
+	- form.html
+
+[GIN-debug] Environment variable PORT is undefined. Using port :8080 by default
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2021/07/16 - 18:02:03 | 200 |    2.079242ms |             ::1 | GET      "/htmlTemplate"
+[GIN] 2021/07/16 - 18:02:15 | 401 |      322.29µs |             ::1 | GET      "/homeCookie"
+[GIN] 2021/07/16 - 18:02:16 | 401 |      79.619µs |             ::1 | GET      "/homeCookie"
