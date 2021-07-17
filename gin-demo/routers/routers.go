@@ -2,9 +2,9 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 10:40:02
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-16 17:36:47
+ * @LastEditTime: 2021-07-17 15:57:17
  * @Description: In User Settings Edit
- * @FilePath: /gin-demo/routers/routers.go
+ * @FilePath: /01-study/gin-demo/routers/routers.go
  */
 package routers
 
@@ -19,12 +19,12 @@ func SetupRouter() *gin.Engine {
 	r := gin.Default()
 	// 注册中间件
 	r.Use(middleware.GlobalMiddleware())
+	// form表单的测试html
+	r.GET("/", app.FormHtml)
 	// 通过Context的Param方法来获取API参数
 	r.GET("/apiParameters/:name/*action", app.ApiParameters)
 	// URL参数	来获取?后的值
 	r.GET("/urlParameters", app.UrlParameters)
-	// form表单的测试html
-	r.GET("/formHtml", app.FormHtml)
 	// 表单参数可以通过PostForm()方法获取
 	r.POST("/formParameters", app.FormParameters)
 	// 上传单个文件
@@ -61,5 +61,23 @@ func SetupRouter() *gin.Engine {
 	r.GET("/loginGetCookie", app.LoginSetCookie)
 	// 需要cookie的页面
 	r.GET("/homeCookie", middleware.AuthMiddleWare(), app.HomeCookie)
+	// 往数据库添加数据
+	r.GET("/addData", app.AddData)
+	// 删除数据库数据
+	r.GET("/deleteData", app.DeleteData)
+	// 更新数据库数据
+	r.GET("/updateData", app.UpdateData)
+	// 超找数据库
+	r.GET("/selectData", app.SelectData)
+	// 存数据到redis
+	r.GET("/connectRedis", app.ConnectRedis)
+	// 从redis里面取数据
+	r.GET("/getRedis", app.GetRedis)
+	// 存多个数据到redis
+	r.GET("/batchRedis", app.BatchRedis)
+	// 取多个redis中的值
+	r.GET("/getBatchRedis", app.GetBatchRedis)
+	// 在redis中存储一个有过期时间的值
+	r.GET("/expireTimeRedis", app.ExpireTimeRedis)
 	return r
 }

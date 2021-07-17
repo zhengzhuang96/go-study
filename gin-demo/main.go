@@ -2,20 +2,28 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 10:37:19
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-16 18:04:17
+ * @LastEditTime: 2021-07-17 11:47:17
  * @Description: In User Settings Edit
- * @FilePath: /gin-demo/main.go
+ * @FilePath: /01-study/gin-demo/main.go
  */
 package main
 
 import (
 	"fmt"
+	"ginDemo/app"
 	"ginDemo/routers"
 	"io"
 	"os"
 
 	"github.com/gin-gonic/gin"
+
+	_ "github.com/go-sql-driver/mysql"
 )
+
+// 在main之前运行
+func init() {
+	app.Conn()
+}
 
 func main() {
 	// 日志文件

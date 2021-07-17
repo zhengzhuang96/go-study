@@ -2,9 +2,9 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 11:38:28
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-16 14:49:50
+ * @LastEditTime: 2021-07-17 15:57:51
  * @Description: In User Settings Edit
- * @FilePath: /gin-demo/app/formParameters.html
+ * @FilePath: /01-study/gin-demo/template/form.html
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -39,6 +39,66 @@
     password: <input type="text" name="password" id="">
     <input type="submit" value="表单验证">
   </form>
+  <div style="margin-top: 100px;"></div>
+  <p>数据库操作</p>
+  <button onclick="addDataFun()">添加数据</button>
+  <button onclick="deleteDataFun()">删除数据</button>
+  <button onclick="updateDataFun()">更新数据</button>
+  <button onclick="selectDataFun()">查找数据</button>
+  <p>redis操作</p>
+  <button onclick="connectRedisFun()">存数据到redis</button>
+  <button onclick="getRedisFun()">从redis中取出数据</button>
+  <button onclick="batchRedisFun()">存多个数据到redis</button>
+  <button onclick="getBatchRedisFun()">取多个redis中的数据</button>
+  <button onclick="expireTimeRedisFun()">在redis中存储一个有过期时间的值</button>
+  <script>
+    var xmlhttp = new XMLHttpRequest()
+    function addDataFun() {
+      console.log('123123123')
+      xmlhttp.open("GET", "http://localhost:8080/addData", true)
+      xmlhttp.send()
+    }
+
+    function deleteDataFun() {
+      xmlhttp.open("GET", "http://localhost:8080/deleteData", true)
+      xmlhttp.send()
+    }
+
+    function updateDataFun() {
+      xmlhttp.open("GET", "http://localhost:8080/updateData", true)
+      xmlhttp.send()
+    }
+    
+    function selectDataFun() {
+      xmlhttp.open("GET", "http://localhost:8080/selectData", true)
+      xmlhttp.send()
+    }
+
+    function connectRedisFun() {
+      xmlhttp.open("GET", "http://localhost:8080/connectRedis", true)
+      xmlhttp.send()
+    }
+
+    function getRedisFun() {
+      xmlhttp.open("GET", "http://localhost:8080/getRedis", true)
+      xmlhttp.send()
+    }
+
+    function batchRedisFun() {
+      xmlhttp.open("GET", "http://localhost:8080/batchRedis", true)
+      xmlhttp.send()
+    }
+
+    function getBatchRedisFun() {
+      xmlhttp.open("GET", "http://localhost:8080/getBatchRedis", true)
+      xmlhttp.send()
+    }
+
+    function expireTimeRedisFun() {
+      xmlhttp.open("GET", "http://localhost:8080/expireTimeRedis", true)
+      xmlhttp.send()
+    }
+  </script>
 </body>
 
 </html>
