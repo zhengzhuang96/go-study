@@ -6,7 +6,7 @@
  * @Description: In User Settings Edit
  * @FilePath: /gin-demo/app/html_template.go
  */
-package app
+package controller
 
 import (
 	"net/http"

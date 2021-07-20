@@ -6,7 +6,7 @@
  * @Description: gin渲染执行
  * @FilePath: /gin-demo/app/rendering_execution.go
  */
-package app
+package controller
 
 import (
 	"log"

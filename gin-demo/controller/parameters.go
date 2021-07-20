@@ -6,7 +6,7 @@
  * @Description: API参数
  * @FilePath: /gin-demo/app/parameters.go
  */
-package app
+package controller
 
 import (
 	"fmt"

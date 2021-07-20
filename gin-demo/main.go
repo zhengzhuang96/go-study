@@ -2,7 +2,7 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 10:37:19
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-17 11:47:17
+ * @LastEditTime: 2021-07-20 08:44:33
  * @Description: In User Settings Edit
  * @FilePath: /01-study/gin-demo/main.go
  */
@@ -10,8 +10,8 @@ package main
 
 import (
 	"fmt"
-	"ginDemo/app"
-	"ginDemo/routers"
+	"gin-demo/database"
+	"gin-demo/routers"
 	"io"
 	"os"
 
@@ -22,7 +22,7 @@ import (
 
 // 在main之前运行
 func init() {
-	app.Conn()
+	database.Conn()
 }
 
 func main() {

@@ -6,7 +6,7 @@
  * @Description: 数据解析与绑定
  * @FilePath: /gin-demo/app/dataParsingBinding.go
  */
-package app
+package controller
 
 import (
 	"net/http"

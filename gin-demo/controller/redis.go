@@ -6,7 +6,7 @@
  * @Description: redis操作
  * @FilePath: /01-study/gin-demo/app/redis.go
  */
-package app
+package controller
 
 import (
 	"fmt"

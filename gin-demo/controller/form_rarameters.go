@@ -6,7 +6,7 @@
  * @Description: 表单参数
  * @FilePath: /gin-demo/app/formParameters.go
  */
-package app
+package controller
 
 import (
 	"fmt"

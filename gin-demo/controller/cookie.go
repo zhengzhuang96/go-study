@@ -2,11 +2,11 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 17:02:57
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-16 17:39:47
+ * @LastEditTime: 2021-07-19 17:39:17
  * @Description: Cookie的使用
- * @FilePath: /gin-demo/app/cookie.go
+ * @FilePath: /01-study/gin-demo/controller/cookie.go
  */
-package app
+package controller
 
 import (
 	"fmt"

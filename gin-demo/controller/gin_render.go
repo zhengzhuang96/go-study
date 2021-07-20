@@ -6,7 +6,7 @@
  * @Description: 渲染	ginRender
  * @FilePath: /gin-demo/app/ginRender.go
  */
-package app
+package controller
 
 import (
 	"github.com/gin-gonic/gin"
