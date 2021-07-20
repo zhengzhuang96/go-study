@@ -2,7 +2,7 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 10:37:19
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 17:59:19
+ * @LastEditTime: 2021-07-20 18:01:24
  * @Description: 主程序
  * @FilePath: /01-study/gin-demo/main.go
  */
@@ -10,7 +10,6 @@ package main
 
 import (
 	"fmt"
-	"gin-demo/database"
 	"gin-demo/middleware"
 	"io"
 	"os"
@@ -22,11 +21,6 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 )
-
-// 在main之前运行
-func init() {
-	database.Conn()
-}
 
 // 主程序
 func main() {

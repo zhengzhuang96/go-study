@@ -27,6 +27,4 @@
 	- index.html
 
 [GIN-debug] Listening and serving HTTP on localhost:8090
-[GIN] 2021/07/20 - 17:53:01 | 200 |    4.977342ms |       127.0.0.1 | GET      "/selectData"
-[GIN] 2021/07/20 - 17:53:20 | 200 |    5.479045ms |       127.0.0.1 | GET      "/selectData"
-[GIN] 2021/07/20 - 17:53:32 | 200 |     5.90548ms |       127.0.0.1 | GET      "/selectData"
+[GIN] 2021/07/20 - 18:01:45 | 200 |   14.784889ms |       127.0.0.1 | GET      "/addData"
