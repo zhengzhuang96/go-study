@@ -2,9 +2,9 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 13:58:58
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-16 15:04:56
+ * @LastEditTime: 2021-07-20 11:13:10
  * @Description: 数据解析与绑定
- * @FilePath: /gin-demo/app/dataParsingBinding.go
+ * @FilePath: /01-study/gin-demo/controller/DataAnalysisController.go
  */
 package controller
 
@@ -14,15 +14,23 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+type DataAnalysisController struct{}
+
 // 定义接收数据的结构体
 type Login struct {
 	User     string `form:"username" json:"user" uri:"user" xml:"user" binding:"required"`
 	Password string `form:"password" json:"password" uri:"password" xml:"password" binding:"required"`
 }
 
+func (dataAc *DataAnalysisController) Router(engine *gin.Engine) {
+	engine.POST("/jsonData", dataAc.jsonDataHandle)
+	engine.POST("/formDataHandle", dataAc.formDataHandle)
+	engine.GET("/urlDataHandle/:user/:password", dataAc.urlDataHandle)
+}
+
 // json数据解析与绑定
 // curl http://127.0.0.1:8080/jsonData -H 'content-type:application/json' -d "{\"User\": \"root\", \"password\": \"admin\"}" -X POST
-func JsonDataHandle(c *gin.Context) {
+func (dataAc *DataAnalysisController) jsonDataHandle(c *gin.Context) {
 	// 1.声明接收的变量
 	var json Login
 	// 将request的body中的数据，自动按照json格式解析到结构体
@@ -42,7 +50,7 @@ func JsonDataHandle(c *gin.Context) {
 }
 
 // form表单数据解析与绑定
-func FormDataHandle(c *gin.Context) {
+func (dataAc *DataAnalysisController) formDataHandle(c *gin.Context) {
 	// 声明接收的变量
 	var form Login
 	// Bind()默认解析并绑定form格式
@@ -60,7 +68,7 @@ func FormDataHandle(c *gin.Context) {
 }
 
 // url数据解析与绑定
-func UrlDataHandle(c *gin.Context) {
+func (dataAc *DataAnalysisController) urlDataHandle(c *gin.Context) {
 	// 声明接收的变量
 	var login Login
 	// Bind()默认解析并绑定form格式

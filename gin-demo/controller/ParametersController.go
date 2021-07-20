@@ -2,9 +2,9 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 11:07:28
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-16 15:56:26
+ * @LastEditTime: 2021-07-20 10:42:35
  * @Description: API参数
- * @FilePath: /gin-demo/app/parameters.go
+ * @FilePath: /01-study/gin-demo/controller/ParametersController.go
  */
 package controller
 
@@ -16,9 +16,16 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+type ParametersController struct{}
+
+func (parameters *ParametersController) Router(engine *gin.Engine) {
+	engine.GET("/apiParameters/:name/*action", parameters.apiParameters)
+	engine.GET("/urlParameters", parameters.urlParameters)
+}
+
 // 可以通过Context的Param方法来获取API参数
 // localhost:8000/xxx/zhangsan	来获取路由后的值
-func ApiParameters(c *gin.Context) {
+func (parameters *ParametersController) apiParameters(c *gin.Context) {
 	name := c.Param("name")
 	action := c.Param("action")
 	fmt.Printf("name：%s, action: %s", name, action)
@@ -30,7 +37,7 @@ func ApiParameters(c *gin.Context) {
 // URL参数可以通过DefaultQuery()或Query()方法获取
 // DefaultQuery()若参数不村则，返回默认值，Query()若不存在，返回空串
 // API?name=zs
-func UrlParameters(c *gin.Context) {
+func (parameters *ParametersController) urlParameters(c *gin.Context) {
 	name := c.DefaultQuery("name", "默认值")
 	path := c.DefaultQuery("path", "默认值")
 	c.String(http.StatusOK, fmt.Sprintf("Hello %s, path %s", name, path))

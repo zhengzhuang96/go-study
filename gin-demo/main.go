@@ -2,7 +2,7 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 10:37:19
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 08:44:33
+ * @LastEditTime: 2021-07-20 10:19:30
  * @Description: In User Settings Edit
  * @FilePath: /01-study/gin-demo/main.go
  */
@@ -11,11 +11,13 @@ package main
 import (
 	"fmt"
 	"gin-demo/database"
-	"gin-demo/routers"
 	"io"
 	"os"
 
 	"github.com/gin-gonic/gin"
+
+	"gin-demo/routers"
+	"gin-demo/tool"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -26,6 +28,11 @@ func init() {
 }
 
 func main() {
+	cfg, err := tool.ParseConfig("./config/app.json")
+	if err != nil {
+		panic(err.Error())
+	}
+
 	// 日志文件
 	gin.DisableConsoleColor()
 	// 创建日志文件并录入文件
@@ -36,9 +43,10 @@ func main() {
 
 	// 路由加载
 	r := routers.SetupRouter()
+
 	// LoadHTMLGlob()方法可以加载模板文件
 	r.LoadHTMLGlob("template/*")
-	if err := r.Run(); err != nil {
+	if err := r.Run(cfg.AppHost + ":" + cfg.AppPort); err != nil {
 		fmt.Printf("startup service failed, err:%v\n", err)
 	}
 }

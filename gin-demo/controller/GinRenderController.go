@@ -2,9 +2,9 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 15:25:50
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-16 15:46:51
+ * @LastEditTime: 2021-07-20 11:17:18
  * @Description: 渲染	ginRender
- * @FilePath: /gin-demo/app/ginRender.go
+ * @FilePath: /01-study/gin-demo/controller/GinRenderController.go
  */
 package controller
 
@@ -13,14 +13,24 @@ import (
 	"github.com/gin-gonic/gin/testdata/protoexample"
 )
 
+type GinRenderController struct{}
+
+func (grc *GinRenderController) Router(engine *gin.Engine) {
+	engine.GET("/someJson", grc.someJSON)
+	engine.GET("/someStruct", grc.someStruct)
+	engine.GET("/someXml", grc.someXML)
+	engine.GET("/someYaml", grc.someYAML)
+	engine.GET("/someProtoBuf", grc.someProtoBuf)
+}
+
 // 1.json
-func SomeJSON(c *gin.Context) {
+func (grc *GinRenderController) someJSON(c *gin.Context) {
 	// fmt.Println("响应格式")
 	c.JSON(200, gin.H{"message": "someJSON", "status": 200})
 }
 
 // 2.结构体响应格式
-func SomeStruct(c *gin.Context) {
+func (grc *GinRenderController) someStruct(c *gin.Context) {
 	var msg struct {
 		Name    string
 		Message string
@@ -34,18 +44,18 @@ func SomeStruct(c *gin.Context) {
 }
 
 // 3.XML
-func SomeXML(c *gin.Context) {
+func (grc *GinRenderController) someXML(c *gin.Context) {
 	c.XML(200, gin.H{"name": "zhangsan"})
 }
 
 // 4.YAML
-func SomeYAML(c *gin.Context) {
+func (grc *GinRenderController) someYAML(c *gin.Context) {
 	c.YAML(200, gin.H{"name": "zhangsan"})
 }
 
 // 5.protoBuf格式，谷歌开发的高效存储读取的工具
 // 自定义传输格式
-func SomeProtoBuf(c *gin.Context) {
+func (grc *GinRenderController) someProtoBuf(c *gin.Context) {
 	reps := []int64{int64(1), int64(2)}
 	// 定义数组
 	label := "label"

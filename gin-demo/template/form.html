@@ -2,7 +2,7 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 11:38:28
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-17 15:57:51
+ * @LastEditTime: 2021-07-20 10:44:13
  * @Description: In User Settings Edit
  * @FilePath: /01-study/gin-demo/template/form.html
 -->
@@ -18,23 +18,23 @@
 
 <body>
   <!-- 正常表单 -->
-  <form action="http://localhost:8080/formParameters" method="post">
+  <form action="http://localhost:8090/formParameters" method="post">
     用户名: <input type="text" name="username" id="">
     密码: <input type="text" name="password" id="">
     <input type="submit" value="提交">
   </form>
   <!-- 上传单个文件 -->
-  <form action="http://localhost:8080/uploadFile" method="post" enctype="multipart/form-data">
+  <form action="http://localhost:8090/uploadFile" method="post" enctype="multipart/form-data">
     选择文件: <input type="file" name="file" id="">
     <input type="submit" value="提交">
   </form>
   <!-- 上传多个文件 -->
-  <form action="http://localhost:8080/uploadMultipleFiles" method="post" enctype="multipart/form-data">
+  <form action="http://localhost:8090/uploadMultipleFiles" method="post" enctype="multipart/form-data">
     上传多张文件:<input type="file" name="files" multiple>
     <input type="submit" value="提交">
   </form>
   <!-- 处理接收到的form表单数据 -->
-  <form action="http://localhost:8080/formDataHandle" method="post">
+  <form action="http://localhost:8090/formDataHandle" method="post">
     User: <input type="text" name="username" id="">
     password: <input type="text" name="password" id="">
     <input type="submit" value="表单验证">
@@ -55,47 +55,47 @@
     var xmlhttp = new XMLHttpRequest()
     function addDataFun() {
       console.log('123123123')
-      xmlhttp.open("GET", "http://localhost:8080/addData", true)
+      xmlhttp.open("GET", "http://localhost:8090/addData", true)
       xmlhttp.send()
     }
 
     function deleteDataFun() {
-      xmlhttp.open("GET", "http://localhost:8080/deleteData", true)
+      xmlhttp.open("GET", "http://localhost:8090/deleteData", true)
       xmlhttp.send()
     }
 
     function updateDataFun() {
-      xmlhttp.open("GET", "http://localhost:8080/updateData", true)
+      xmlhttp.open("GET", "http://localhost:8090/updateData", true)
       xmlhttp.send()
     }
     
     function selectDataFun() {
-      xmlhttp.open("GET", "http://localhost:8080/selectData", true)
+      xmlhttp.open("GET", "http://localhost:8090/selectData", true)
       xmlhttp.send()
     }
 
     function connectRedisFun() {
-      xmlhttp.open("GET", "http://localhost:8080/connectRedis", true)
+      xmlhttp.open("GET", "http://localhost:8090/connectRedis", true)
       xmlhttp.send()
     }
 
     function getRedisFun() {
-      xmlhttp.open("GET", "http://localhost:8080/getRedis", true)
+      xmlhttp.open("GET", "http://localhost:8090/getRedis", true)
       xmlhttp.send()
     }
 
     function batchRedisFun() {
-      xmlhttp.open("GET", "http://localhost:8080/batchRedis", true)
+      xmlhttp.open("GET", "http://localhost:8090/batchRedis", true)
       xmlhttp.send()
     }
 
     function getBatchRedisFun() {
-      xmlhttp.open("GET", "http://localhost:8080/getBatchRedis", true)
+      xmlhttp.open("GET", "http://localhost:8090/getBatchRedis", true)
       xmlhttp.send()
     }
 
     function expireTimeRedisFun() {
-      xmlhttp.open("GET", "http://localhost:8080/expireTimeRedis", true)
+      xmlhttp.open("GET", "http://localhost:8090/expireTimeRedis", true)
       xmlhttp.send()
     }
   </script>
