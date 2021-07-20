@@ -2,7 +2,7 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 10:37:19
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 10:19:30
+ * @LastEditTime: 2021-07-20 15:29:06
  * @Description: In User Settings Edit
  * @FilePath: /01-study/gin-demo/main.go
  */
@@ -29,6 +29,11 @@ func init() {
 
 func main() {
 	cfg, err := tool.ParseConfig("./config/app.json")
+	if err != nil {
+		panic(err.Error())
+	}
+
+	_, err = tool.OrmEngine(cfg)
 	if err != nil {
 		panic(err.Error())
 	}

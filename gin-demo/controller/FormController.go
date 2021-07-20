@@ -2,7 +2,7 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 11:33:18
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 10:43:16
+ * @LastEditTime: 2021-07-20 16:57:57
  * @Description: 表单参数
  * @FilePath: /01-study/gin-demo/controller/FormController.go
  */
@@ -45,6 +45,7 @@ func (form *FormController) uploadFile(c *gin.Context) {
 	file, err := c.FormFile("file")
 	if err != nil {
 		c.String(500, "文件上传失败")
+		return
 	}
 	fmt.Println(file.Filename)
 	c.SaveUploadedFile(file, "assets/"+file.Filename)
