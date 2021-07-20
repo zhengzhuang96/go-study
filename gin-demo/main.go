@@ -2,8 +2,8 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 10:37:19
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 15:29:06
- * @Description: In User Settings Edit
+ * @LastEditTime: 2021-07-20 17:59:19
+ * @Description: 主程序
  * @FilePath: /01-study/gin-demo/main.go
  */
 package main
@@ -11,6 +11,7 @@ package main
 import (
 	"fmt"
 	"gin-demo/database"
+	"gin-demo/middleware"
 	"io"
 	"os"
 
@@ -27,6 +28,7 @@ func init() {
 	database.Conn()
 }
 
+// 主程序
 func main() {
 	cfg, err := tool.ParseConfig("./config/app.json")
 	if err != nil {
@@ -51,6 +53,10 @@ func main() {
 
 	// LoadHTMLGlob()方法可以加载模板文件
 	r.LoadHTMLGlob("template/*")
+
+	// 设置全局跨域访问
+	r.Use(middleware.Cors())
+
 	if err := r.Run(cfg.AppHost + ":" + cfg.AppPort); err != nil {
 		fmt.Printf("startup service failed, err:%v\n", err)
 	}

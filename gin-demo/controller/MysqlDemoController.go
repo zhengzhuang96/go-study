@@ -2,7 +2,7 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-17 10:20:12
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 17:09:32
+ * @LastEditTime: 2021-07-20 17:11:03
  * @Description: mysql操作
  * @FilePath: /01-study/gin-demo/controller/MysqlDemoController.go
  */
@@ -14,12 +14,6 @@ import (
 
 	"github.com/gin-gonic/gin"
 )
-
-// type Place struct {
-// 	Country string `db:"country"`
-// 	City    string `db:"city"`
-// 	Telcode int    `db:"telcode"`
-// }
 
 type MysqlDemoController struct{}
 
