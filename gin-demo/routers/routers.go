@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-16 10:40:02
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-21 10:40:28
- * @Description: In User Settings Edit
- * @FilePath: /01-study/gin-demo/routers/routers.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-16 10:40:02
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:46:14
+// Description: In User Settings Edit
+// FilePath: /01-study/gin-demo/routers/routers.go
 package routers
 
 import (

@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-16 13:58:58
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 21:10:33
- * @Description: 数据解析与绑定
- * @FilePath: /01-study/gin-demo/controller/data_analysis_controller.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-16 13:58:58
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:42:33
+// Description: 数据解析与绑定
+// FilePath: /01-study/gin-demo/controller/data_analysis_controller.go
 package controller
 
 import (

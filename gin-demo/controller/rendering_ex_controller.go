@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-16 16:12:04
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 10:53:19
- * @Description: gin渲染执行
- * @FilePath: /01-study/gin-demo/controller/RenderingExController.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-16 16:12:04
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:45:00
+// Description: gin渲染执行
+// FilePath: /01-study/gin-demo/controller/rendering_ex_controller.go
 package controller
 
 import (

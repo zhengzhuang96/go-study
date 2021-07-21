@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-20 14:58:52
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-21 10:45:02
- * @Description: In User Settings Edit
- * @FilePath: /01-study/gin-demo/model/person.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-20 14:58:52
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:46:05
+// Description: In User Settings Edit
+// FilePath: /01-study/gin-demo/model/person.go
 package model
 
 type Person struct {

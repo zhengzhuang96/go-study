@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-20 17:41:40
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 17:58:31
- * @Description: 跨域访问中间件
- * @FilePath: /01-study/gin-demo/middleware/Cors.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-20 17:41:40
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:45:35
+// Description: 跨域访问中间件
+// FilePath: /01-study/gin-demo/middleware/cors.go
 package middleware
 
 import (

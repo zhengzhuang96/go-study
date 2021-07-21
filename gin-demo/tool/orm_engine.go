@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-20 14:39:30
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 15:28:27
- * @Description: 数据库连接
- * @FilePath: /01-study/gin-demo/tool/OrmEngine.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-20 14:39:30
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:46:53
+// Description: 数据库连接
+// FilePath: /01-study/gin-demo/tool/orm_engine.go
 package tool
 
 import (

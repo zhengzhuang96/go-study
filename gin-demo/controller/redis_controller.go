@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-17 11:56:16
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-21 14:49:23
- * @Description: redis操作
- * @FilePath: /01-study/gin-demo/controller/redis_controller.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-17 11:56:16
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:44:48
+// Description: redis操作
+// FilePath: /01-study/gin-demo/controller/redis_controller.go
 package controller
 
 import (

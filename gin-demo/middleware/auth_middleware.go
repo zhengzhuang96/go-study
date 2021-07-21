@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-16 17:32:41
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-16 17:36:30
- * @Description: cookie 验证
- * @FilePath: /gin-demo/middleware/auth_middleWare.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-16 17:32:41
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:45:25
+// Description: cookie 验证
+// FilePath: /01-study/gin-demo/middleware/auth_middleware.go
 package middleware
 
 import (

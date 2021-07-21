@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-17 10:20:12
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 17:11:03
- * @Description: mysql操作
- * @FilePath: /01-study/gin-demo/controller/MysqlDemoController.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-17 10:20:12
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:44:21
+// Description: mysql操作
+// FilePath: /01-study/gin-demo/controller/mysql_demo_controller.go
 package controller
 
 import (

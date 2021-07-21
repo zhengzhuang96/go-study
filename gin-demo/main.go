@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-16 10:37:19
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-21 10:12:05
- * @Description: 主程序
- * @FilePath: /01-study/gin-demo/main.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-16 10:37:19
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:47:11
+// Description: In User Settings Edit
+// FilePath: /01-study/gin-demo/main.go
 package main
 
 import (

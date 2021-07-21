@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-16 11:07:28
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 10:42:35
- * @Description: API参数
- * @FilePath: /01-study/gin-demo/controller/ParametersController.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-16 11:07:28
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:44:39
+// Description: API参数
+// FilePath: /01-study/gin-demo/controller/parameters_controller.go
 package controller
 
 import (

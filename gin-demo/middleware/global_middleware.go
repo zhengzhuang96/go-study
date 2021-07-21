@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-16 16:31:29
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-17 15:35:07
- * @Description: 中间件
- * @FilePath: /01-study/gin-demo/middleware/global_middleware.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-16 16:31:29
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:45:45
+// Description: 中间件
+// FilePath: /01-study/gin-demo/middleware/global_middleware.go
 package middleware
 
 import (

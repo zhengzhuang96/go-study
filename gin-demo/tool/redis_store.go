@@ -1,11 +1,10 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-21 09:40:27
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-21 14:47:29
- * @Description: In User Settings Edit
- * @FilePath: /01-study/gin-demo/tool/redis_store.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-21 09:40:27
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:47:03
+// Description: In User Settings Edit
+// FilePath: /01-study/gin-demo/tool/redis_store.go
+
 package tool
 
 import (

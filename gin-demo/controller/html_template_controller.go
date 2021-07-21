@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-16 15:51:33
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 10:42:45
- * @Description: In User Settings Edit
- * @FilePath: /01-study/gin-demo/controller/HtmlTemplateController.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-16 15:51:33
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:44:10
+// Description: In User Settings Edit
+// FilePath: /01-study/gin-demo/controller/html_template_controller.go
 package controller
 
 import (

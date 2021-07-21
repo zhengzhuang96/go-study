@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-20 15:12:18
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 16:51:37
- * @Description: In User Settings Edit
- * @FilePath: /01-study/gin-demo/dao/PersonDao.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-20 15:12:18
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:45:14
+// Description: In User Settings Edit
+// FilePath: /01-study/gin-demo/dao/person_dao.go
 package dao
 
 import (

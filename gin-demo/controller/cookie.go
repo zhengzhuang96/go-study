@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-16 17:02:57
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-19 17:39:17
- * @Description: Cookie的使用
- * @FilePath: /01-study/gin-demo/controller/cookie.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-16 17:02:57
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:42:13
+// Description: Cookie的使用
+// FilePath: /01-study/gin-demo/controller/cookie.go
 package controller
 
 import (

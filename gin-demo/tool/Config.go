@@ -1,11 +1,10 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-20 09:41:54
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-21 15:04:53
- * @Description: In User Settings Edit
- * @FilePath: /01-study/gin-demo/tool/config.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-20 09:41:54
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 21:46:44
+// Description: In User Settings Edit
+// FilePath: /01-study/gin-demo/tool/config.go
+
 package tool
 
 import (
