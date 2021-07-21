@@ -12,5 +12,11 @@
     "db_name": "test",
     "charset": "utf8",
     "show_sql": true
+  },
+  "redis_config": {
+    "addr": "localhost",
+    "port": "6379",
+    "password": "",
+    "db": 0
   }
 }

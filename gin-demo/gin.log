@@ -21,10 +21,14 @@
 [GIN-debug] GET    /deleteData               --> gin-demo/controller.(*MysqlDemoController).deleteData-fm (4 handlers)
 [GIN-debug] GET    /updateData               --> gin-demo/controller.(*MysqlDemoController).UpdateData-fm (4 handlers)
 [GIN-debug] GET    /selectData               --> gin-demo/controller.(*MysqlDemoController).SelectData-fm (4 handlers)
+[GIN-debug] GET    /redis/setRedis           --> gin-demo/controller.(*RedisController).setRedis-fm (4 handlers)
+[GIN-debug] GET    /redis/getRedis           --> gin-demo/controller.(*RedisController).getRedis-fm (4 handlers)
+[GIN-debug] GET    /redis/batchRedis         --> gin-demo/controller.(*RedisController).batchRedis-fm (4 handlers)
 [GIN-debug] Loaded HTML Templates (3): 
 	- 
 	- form.html
 	- index.html
 
 [GIN-debug] Listening and serving HTTP on localhost:8090
-[GIN] 2021/07/20 - 18:01:45 | 200 |   14.784889ms |       127.0.0.1 | GET      "/addData"
+[GIN] 2021/07/21 - 16:51:09 | 200 |    7.957765ms |       127.0.0.1 | GET      "/addData"
+[GIN] 2021/07/21 - 16:51:38 | 200 |   13.777103ms |       127.0.0.1 | GET      "/addData"

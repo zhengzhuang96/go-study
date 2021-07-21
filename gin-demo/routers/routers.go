@@ -2,7 +2,7 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 10:40:02
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 15:26:28
+ * @LastEditTime: 2021-07-21 10:40:28
  * @Description: In User Settings Edit
  * @FilePath: /01-study/gin-demo/routers/routers.go
  */
@@ -27,6 +27,7 @@ func SetupRouter() *gin.Engine {
 	new(controller.RenderingExController).Router(app)
 	new(controller.DataAnalysisController).Router(app)
 	new(controller.MysqlDemoController).Router(app)
+	new(controller.RedisController).Router(app)
 
 	// // form表单的测试html
 	// r.GET("/", controller.FormHtml)

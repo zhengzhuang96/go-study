@@ -1,11 +1,9 @@
-/*
- * @Author: zhengzhuang
- * @Date: 2021-07-20 15:30:41
- * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 16:52:49
- * @Description: In User Settings Edit
- * @FilePath: /01-study/gin-demo/service/MysqlDemoService.go
- */
+// Author: zhengzhuang
+// Date: 2021-07-20 15:30:41
+// LastEditors: zhengzhuang
+// LastEditTime: 2021-07-21 17:57:43
+// Description: In User Settings Edit
+// FilePath: /01-study/gin-demo/service/mysql_demo_service.go
 package service
 
 import (

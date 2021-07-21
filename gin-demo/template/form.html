@@ -2,7 +2,7 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 11:38:28
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 10:44:13
+ * @LastEditTime: 2021-07-21 15:21:36
  * @Description: In User Settings Edit
  * @FilePath: /01-study/gin-demo/template/form.html
 -->
@@ -46,8 +46,8 @@
   <button onclick="updateDataFun()">更新数据</button>
   <button onclick="selectDataFun()">查找数据</button>
   <p>redis操作</p>
-  <button onclick="connectRedisFun()">存数据到redis</button>
-  <button onclick="getRedisFun()">从redis中取出数据</button>
+  <button onclick="getRedis()">获取存储的一个值</button>
+  <button onclick="setRedisFun()">存一个值</button>
   <button onclick="batchRedisFun()">存多个数据到redis</button>
   <button onclick="getBatchRedisFun()">取多个redis中的数据</button>
   <button onclick="expireTimeRedisFun()">在redis中存储一个有过期时间的值</button>
@@ -74,13 +74,13 @@
       xmlhttp.send()
     }
 
-    function connectRedisFun() {
-      xmlhttp.open("GET", "http://localhost:8090/connectRedis", true)
+    function getRedis() {
+      xmlhttp.open("GET", "http://localhost:8090/redis/getRedis", true)
       xmlhttp.send()
     }
 
-    function getRedisFun() {
-      xmlhttp.open("GET", "http://localhost:8090/getRedis", true)
+    function setRedisFun() {
+      xmlhttp.open("GET", "http://localhost:8090/redis/setRedis", true)
       xmlhttp.send()
     }
 

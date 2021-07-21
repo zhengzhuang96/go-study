@@ -2,9 +2,9 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 11:33:18
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 16:57:57
+ * @LastEditTime: 2021-07-20 21:20:32
  * @Description: 表单参数
- * @FilePath: /01-study/gin-demo/controller/FormController.go
+ * @FilePath: /01-study/gin-demo/controller/form_controller.go
  */
 package controller
 

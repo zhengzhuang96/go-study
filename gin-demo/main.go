@@ -2,7 +2,7 @@
  * @Author: zhengzhuang
  * @Date: 2021-07-16 10:37:19
  * @LastEditors: zhengzhuang
- * @LastEditTime: 2021-07-20 18:01:24
+ * @LastEditTime: 2021-07-21 10:12:05
  * @Description: 主程序
  * @FilePath: /01-study/gin-demo/main.go
  */
@@ -44,6 +44,9 @@ func main() {
 
 	// 路由加载
 	r := routers.SetupRouter()
+
+	// 初始化redis配置
+	tool.InitRedisStore()
 
 	// LoadHTMLGlob()方法可以加载模板文件
 	r.LoadHTMLGlob("template/*")
