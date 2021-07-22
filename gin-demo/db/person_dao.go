@@ -4,7 +4,7 @@
 // LastEditTime: 2021-07-21 21:45:14
 // Description: In User Settings Edit
 // FilePath: /01-study/gin-demo/dao/person_dao.go
-package dao
+package db
 
 import (
 	"gin-demo/model"
