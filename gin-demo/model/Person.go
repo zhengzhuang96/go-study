@@ -7,9 +7,9 @@
 package model
 
 type Person struct {
-	Id       int64  `xorm:"pk autoincr" json:"id"`
-	UserId   int64  `xorm:"int" json:"user_id"`
-	Username string `xorm:"varchar(256)" json:"username"`
-	Sex      string `xorm:"varchar(256)" json:"sex"`
-	Email    string `xorm:"varchar(256)" json:"email"`
+	Id       int64  `db:"id"`
+	UserId   int64  `db:"user_id"`
+	Username string `db:"username"`
+	Sex      string `db:"sex"`
+	Email    string `db:"email"`
 }

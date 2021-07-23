@@ -27,7 +27,7 @@ func main() {
 		panic(err.Error())
 	}
 
-	_, err = tool.OrmEngine(cfg)
+	err = tool.OrmEngine(cfg)
 	if err != nil {
 		panic(err.Error())
 	}

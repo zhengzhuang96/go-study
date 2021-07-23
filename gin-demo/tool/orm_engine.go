@@ -7,35 +7,48 @@
 package tool
 
 import (
-	"gin-demo/model"
+	"fmt"
 
-	"github.com/go-xorm/xorm"
+	"github.com/jmoiron/sqlx"
 )
 
 var DbEngine *Orm
 
 type Orm struct {
-	*xorm.Engine
+	*sqlx.DB
 }
 
+// var schema = `
+// CREATE TABLE person (
+//     first_name text,
+//     last_name text,
+//     email text
+// );
+
+// CREATE TABLE place (
+//     country text,
+//     city text NULL,
+//     telcode integer
+// )`
+
 // 数据库连接
-func OrmEngine(cfg *Config) (*Orm, error) {
+func OrmEngine(cfg *Config) error {
 	database := cfg.Database
-	conn := database.User + ":" + database.Password + "@tcp(" + database.Host + ":" + database.Port + ")/" + database.DbName + "?charset=" + database.Charset
-	engine, err := xorm.NewEngine("mysql", conn)
+	conn := database.User + ":" + database.Password + "@tcp(" + database.Host + ":" + database.Port + ")/" + database.DbName
+	engine, err := sqlx.Open("mysql", conn)
 	if err != nil {
-		return nil, err
+		fmt.Println("open mysql failed,", err)
+		return err
 	}
 
-	engine.ShowSQL(database.ShowSql)
+	// engine.MustExec(schema)
 
-	err = engine.Sync2(new(model.Person))
 	if err != nil {
-		return nil, err
+		return err
 	}
 
 	orm := new(Orm)
-	orm.Engine = engine
+	orm.DB = engine
 	DbEngine = orm
-	return orm, nil
+	return nil
 }

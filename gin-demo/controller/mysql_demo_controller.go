@@ -19,7 +19,7 @@ func (mdc *MysqlDemoController) Router(engine *gin.Engine) {
 	engine.GET("/addData", mdc.addData)
 	engine.GET("/deleteData", mdc.deleteData)
 	engine.GET("/updateData", mdc.UpdateData)
-	engine.GET("/selectData", mdc.SelectData)
+	engine.GET("/selectData", mdc.QueryRowData)
 }
 
 // 数据添加(增)
@@ -56,11 +56,12 @@ func (mdc *MysqlDemoController) UpdateData(c *gin.Context) {
 }
 
 // 数据查找(找)
-func (mdc *MysqlDemoController) SelectData(c *gin.Context) {
+func (mdc *MysqlDemoController) QueryRowData(c *gin.Context) {
 	ms := service.MysqlDemoService{}
-	selectInfo := ms.SelectData()
+	selectInfo := ms.QueryRowData()
 	if selectInfo != nil {
 		tool.Success(c, map[string]interface{}{
+			"id":       selectInfo.Id,
 			"userId":   selectInfo.UserId,
 			"username": selectInfo.Username,
 			"sex":      selectInfo.Sex,

@@ -16,28 +16,28 @@ type MysqlDemoService struct{}
 
 func (mds *MysqlDemoService) AddData() bool {
 	r := model.Person{UserId: 2, Username: "username", Sex: "男", Email: "121730414@qq.com"}
-	personDao := db.PersonDao{Orm: tool.DbEngine}
-	result := personDao.InsertData(r)
+	personDb := db.PersonDb{Orm: tool.DbEngine}
+	result := personDb.InsertData(r)
 	return result > 0
 }
 
 func (mds *MysqlDemoService) DeleteData() bool {
 	r := model.Person{UserId: 2}
-	personDao := db.PersonDao{Orm: tool.DbEngine}
-	result := personDao.DeleteData(r)
+	personDb := db.PersonDb{Orm: tool.DbEngine}
+	result := personDb.DeleteData(r)
 	return result > 0
 }
 
 func (md *MysqlDemoService) UpdateData() bool {
 	r := model.Person{UserId: 1, Username: "哈哈哈"}
-	personDao := db.PersonDao{Orm: tool.DbEngine}
-	result := personDao.UpdateData(r)
-	return result > 0
+	personDb := db.PersonDb{Orm: tool.DbEngine}
+	result := personDb.UpdateData(r)
+	return result
 }
 
-func (md *MysqlDemoService) SelectData() *model.Person {
+func (md *MysqlDemoService) QueryRowData() *model.Person {
 	r := model.Person{UserId: 1}
-	personDao := db.PersonDao{Orm: tool.DbEngine}
-	// result := personDao.SelectData(r)
-	return personDao.SelectData(r)
+	personDb := db.PersonDb{Orm: tool.DbEngine}
+	// result := personDb.SelectData(r)
+	return personDb.QueryRowData(r)
 }
