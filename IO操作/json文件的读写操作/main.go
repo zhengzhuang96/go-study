@@ -2,7 +2,7 @@
 // Date: 2021-07-23 14:51:11
 // LastEditors: zhengzhuang
 // LastEditTime: 2021-07-23 14:56:01
-// Description: In User Settings Edit
+// Description: json文件的读写操作
 // FilePath: /01-study/IO操作/json文件的读写操作/main.go
 package main
 
@@ -12,7 +12,6 @@ import (
 	"os"
 )
 
-// 创建一个json文件
 type Website struct {
 	Name   string `xml:"name,attr"`
 	Url    string
