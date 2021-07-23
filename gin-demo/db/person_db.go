@@ -18,7 +18,7 @@ type PersonDb struct {
 
 func (db *PersonDb) InsertData(person model.Person) int64 {
 	sqlStr := "INSERT into person(user_id, username, sex, email) values (?,?,?,?)"
-	ret, err := db.Exec(sqlStr, 123123, "小王子", "男", "zheng960108@163.com")
+	ret, err := db.Exec(sqlStr, person.UserId, person.Username, person.Sex, person.Email)
 	if err != nil {
 		println(err.Error())
 		return 0

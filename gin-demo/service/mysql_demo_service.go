@@ -15,7 +15,7 @@ import (
 type MysqlDemoService struct{}
 
 func (mds *MysqlDemoService) AddData() bool {
-	r := model.Person{UserId: 2, Username: "username", Sex: "男", Email: "121730414@qq.com"}
+	r := model.Person{UserId: 2, Username: "我的名字", Sex: "男", Email: "121730414@qq.com"}
 	personDb := db.PersonDb{Orm: tool.DbEngine}
 	result := personDb.InsertData(r)
 	return result > 0
@@ -38,6 +38,5 @@ func (md *MysqlDemoService) UpdateData() bool {
 func (md *MysqlDemoService) QueryRowData() *model.Person {
 	r := model.Person{UserId: 1}
 	personDb := db.PersonDb{Orm: tool.DbEngine}
-	// result := personDb.SelectData(r)
 	return personDb.QueryRowData(r)
 }

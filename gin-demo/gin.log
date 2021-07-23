@@ -25,9 +25,9 @@
 [GIN-debug] GET    /redis/getRedis           --> gin-demo/controller.(*RedisController).getRedis-fm (4 handlers)
 [GIN-debug] GET    /redis/batchRedis         --> gin-demo/controller.(*RedisController).batchRedis-fm (4 handlers)
 [GIN-debug] Loaded HTML Templates (3): 
+	- 
 	- form.html
 	- index.html
-	- 
 
 [GIN-debug] Listening and serving HTTP on localhost:8090
-[GIN] 2021/07/23 - 11:55:16 | 200 |    7.787648ms |       127.0.0.1 | GET      "/selectData"
+[GIN] 2021/07/23 - 13:54:51 | 200 |   11.566954ms |       127.0.0.1 | GET      "/addData"
