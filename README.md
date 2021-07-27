@@ -16,7 +16,7 @@ Go入门的学习笔记，记录从零开始的过程，做一个Go开发工程�
     |   |-- 二进制文件的读写操作
     |   |-- 文件锁操作
     |   |-- 纯文本文件的读写操作
-    |-- gin-demo                        // gin项目demo
+    |-- gin-demo                        // gin项目实战demo
     |-- im-system-demo                  // socket
     |-- iris-demo
     |-- package
