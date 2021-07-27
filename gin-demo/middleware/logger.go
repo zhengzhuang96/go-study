@@ -39,19 +39,31 @@ func initWebLog() {
 
 // 初始化日志句柄
 func initLog(logFileName string) *logrus.Logger {
-	logger := logrus.New()
+
 	logName := fmt.Sprintf("%s%s", "logs/", logFileName)
+
 	var src *os.File
 	var err error
+
 	// 判断日志文件是否存在，不存在则创建，否则就直接打开
-	if _, err := os.Stat(logName); os.IsNotExist(err) {
+	if _, err = os.Stat(logName); os.IsNotExist(err) {
 		src, err = os.Create(logName)
 	} else {
 		src, err = os.OpenFile(logName, os.O_APPEND|os.O_WRONLY, os.ModeAppend)
 	}
+	if err != nil {
+		fmt.Println("err", err)
+	}
 
+	// 实例化
+	logger := logrus.New()
+
+	// 设置输出
 	logger.Out = src
+
+	// 设置日志级别
 	logger.Level = logrus.InfoLevel
+
 	// 设置 rotatelogs
 	logWriter, err := rotatelogs.New(
 		// 分割后的文件名称
@@ -67,7 +79,7 @@ func initLog(logFileName string) *logrus.Logger {
 		rotatelogs.WithRotationTime(24*time.Hour),
 	)
 	if err != nil {
-		println(err)
+		fmt.Println("err", err)
 	}
 
 	writeMap := lfshook.WriterMap{
@@ -82,8 +94,10 @@ func initLog(logFileName string) *logrus.Logger {
 	lfHook := lfshook.NewHook(writeMap, &logrus.JSONFormatter{
 		TimestampFormat: "2006-01-02 15:04:05",
 	})
+
 	// 新增 Hook
 	logger.AddHook(lfHook)
+
 	return logger
 }
 
@@ -121,6 +135,6 @@ func LoggerToFile() gin.HandlerFunc {
 			"ip":          clientIP,
 			"method":      reqMethod,
 			"uri":         reqUri,
-		}).Info("access")
+		}).Info()
 	}
 }

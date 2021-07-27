@@ -44,7 +44,7 @@ func InitRedisStore() *RedisStores {
 func (rs *RedisStores) Set(id string, value string, expiration time.Duration) {
 	err := rs.client.Set(id, value, expiration).Err()
 	if err != nil {
-		middleware.AppLog.WithFields(logrus.Fields{
+		middleware.WebLog.WithFields(logrus.Fields{
 			"key": id,
 		}).Errorf("key exists execute redis cmd fail [%v]", err)
 	}
