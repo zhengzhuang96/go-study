@@ -16,54 +16,14 @@ Go入门的学习笔记，记录从零开始的过程，做一个Go开发工程�
     |   |-- 二进制文件的读写操作
     |   |-- 文件锁操作
     |   |-- 纯文本文件的读写操作
-    |-- gin-demo                                          // gin项目demo
-    |   |-- main.go
-    |   |-- config
-    |   |   |-- app.json
-    |   |-- controller
-    |   |   |-- cookie.go
-    |   |   |-- data_analysis_controller.go
-    |   |   |-- form_controller.go
-    |   |   |-- gin_render_controller.go
-    |   |   |-- html_template_controller.go
-    |   |   |-- mysql_demo_controller.go
-    |   |   |-- parameters_controller.go
-    |   |   |-- redis_controller.go
-    |   |   |-- rendering_ex_controller.go
-    |   |-- db
-    |   |   |-- person_db.go
-    |   |-- logs
-    |   |-- middleware
-    |   |   |-- auth_middleware.go
-    |   |   |-- cors.go
-    |   |   |-- global_middleware.go
-    |   |   |-- local_middleware.go
-    |   |   |-- logger.go
-    |   |-- model
-    |   |   |-- Person.go
-    |   |-- routers
-    |   |   |-- routers.go
-    |   |-- service
-    |   |   |-- mysql_demo_service.go
-    |   |-- template
-    |   |   |-- form.html
-    |   |   |-- index.html
-    |   |-- tool
-    |       |-- Config.go
-    |       |-- common_result.go
-    |       |-- orm_engine.go
-    |       |-- redis_store.go
-    |-- im-system-demo
-    |   |-- main
-    |   |-- main.go
-    |   |-- server.go
-    |   |-- user.go
+    |-- gin-demo                        // gin项目demo
+    |-- im-system-demo                  // socket
     |-- iris-demo
     |-- package
-    |   |-- fmt
+    |   |-- fmt                         // fmt用法
     |   |-- net
     |       |-- http
-    |       |-- smtp
+    |       |-- smtp                    // 发送邮件
     |       |-- url
     |-- 函数
     |   |-- defer(延迟调用)
