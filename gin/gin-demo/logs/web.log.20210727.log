@@ -1,0 +1,2 @@
+{"key":"name","level":"error","msg":"key exists execute redis cmd fail [dial tcp [::1]:6379: connect: connection refused]","time":"2021-07-27 14:30:40"}
+{"http_status":200,"ip":"127.0.0.1","level":"info","method":"GET","msg":"","time":"2021-07-27 14:30:40","total_time":"2.985111ms","uri":"/redis/setRedis"}
