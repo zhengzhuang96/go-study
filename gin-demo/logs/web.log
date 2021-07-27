@@ -1,0 +1,10 @@
+time="2021-07-27T11:59:50+08:00" level=info msg=access http_status=200 ip=127.0.0.1 method=GET total_time=1.453727ms uri=/redis/setRedis
+{"http_status":200,"ip":"127.0.0.1","level":"info","method":"GET","msg":"access","time":"2021-07-27 13:45:00","total_time":"1.283069ms","uri":"/redis/setRedis"}
+{"http_status":200,"ip":"127.0.0.1","level":"info","method":"GET","msg":"access","time":"2021-07-27 13:45:06","total_time":"1.514808ms","uri":"/redis/setRedis"}
+{"http_status":200,"ip":"127.0.0.1","level":"info","method":"GET","msg":"access","time":"2021-07-27 13:45:07","total_time":"1.268836ms","uri":"/redis/setRedis"}
+{"http_status":200,"ip":"127.0.0.1","level":"info","method":"GET","msg":"access","time":"2021-07-27 13:45:07","total_time":"1.126362ms","uri":"/redis/setRedis"}
+{"http_status":200,"ip":"127.0.0.1","level":"info","method":"GET","msg":"access","time":"2021-07-27 13:45:11","total_time":"1.503222ms","uri":"/redis/getRedis"}
+{"key":"name","level":"error","msg":"key exists execute redis cmd fail [dial tcp [::1]:6379: connect: connection refused]","time":"2021-07-27 13:45:32"}
+{"http_status":200,"ip":"127.0.0.1","level":"info","method":"GET","msg":"access","time":"2021-07-27 13:45:32","total_time":"1.727938ms","uri":"/redis/setRedis"}
+{"key":"name","level":"error","msg":"key exists execute redis cmd fail [dial tcp [::1]:6379: connect: connection refused]","time":"2021-07-27 13:45:33"}
+{"http_status":200,"ip":"127.0.0.1","level":"info","method":"GET","msg":"access","time":"2021-07-27 13:45:33","total_time":"1.348231ms","uri":"/redis/setRedis"}

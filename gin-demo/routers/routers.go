@@ -15,6 +15,7 @@ import (
 
 func SetupRouter() *gin.Engine {
 	app := gin.Default()
+	app.Use(middleware.LoggerToFile())
 
 	// 注册中间件
 	app.Use(middleware.GlobalMiddleware())
