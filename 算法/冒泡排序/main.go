@@ -25,6 +25,7 @@ func SmallLarge(arr *[6]int) {
 func main() {
 	arrData := [6]int{1, 3, 9, 5, 4, 7}
 	fmt.Println("原值:", arrData)
+
 	SmallLarge(&arrData)
 	fmt.Println("由小到大排序:", arrData)
 }

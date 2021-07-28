@@ -36,6 +36,5 @@ func BinaryFind(arr *[6]int, leftIndex int, rightIndex int, findVal int) {
 
 func main() {
 	arr := [6]int{1, 8, 10, 89, 1000, 1345}
-
 	BinaryFind(&arr, 0, len(arr)-1, 89)
 }

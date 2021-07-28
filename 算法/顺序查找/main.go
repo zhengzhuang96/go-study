@@ -10,7 +10,6 @@ import "fmt"
 
 func main() {
 	arr := [6]string{"刘备", "关羽", "张飞", "曹操", "孙权", "诸葛亮"}
-
 	var search string
 
 	fmt.Println("请输入要查找的人物...")
@@ -38,5 +37,4 @@ func main() {
 	} else {
 		fmt.Println("没有查到")
 	}
-
 }
