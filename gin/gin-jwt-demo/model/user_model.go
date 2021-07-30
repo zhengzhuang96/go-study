@@ -18,6 +18,6 @@ type User struct {
 
 // LoginReq 登录请求参数类
 type LoginReq struct {
-	Mobile   string `json:"mobile"`
-	Password string `json:"password"`
+	Mobile   string `form:"mobile" json:"mobile" binding:"required"`
+	Password string `form:"password" json:"password" binding:"required"`
 }
